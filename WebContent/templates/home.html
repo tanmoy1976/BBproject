@@ -1,0 +1,80 @@
+	<!--HCL Technology, 2014-->
+	<!-- Fixed navbar -->
+
+    <div class="navbar navbar-default ui-widget-header  ui-widget-header" role="navigation">
+    <div class="container" style="width:100%;">
+		<div class="header"><span class="logo"><img src="images/TMO_small.png" alt="T-Mobile Logo"/></span>Backbone Project</div>
+		<div class="show-user-name">Welcome:<span id="user_name"><%= username %></span></div>
+        <a href="#login" class="ui-widget ui-state-default" id="loginstyle"><span class="fa fa-power-off "></span></a>
+
+	</div>
+	</div>
+	
+	
+	<!-- container -->
+	<div id="home_older">
+		<!-- application menu -->
+		<div id="menu_Panel" class="col-md-3 menu-panel">
+			<div id='cssmenu'>
+			<ul>
+			   <li style="visibility:hidden;"></li>
+			   <li id="ops_dashboard" class=" active_accord has-sub active">
+					<a><span>Dashboard</span></a>
+					<ul style="display:block;">
+						<li><a href='#dashBoard/show_ops_dasboard'>Operational Dashboard</a></li>
+						<li><a href='#dashBoard/showdashBoard'>Job Summary</a></li>
+						<!--<li><a href='#dashBoard/show_lineage_dashboard'>Lineage Dashboard</a></li>-->
+						<li><a href='http://devehdp004.unix.gsm1900.org:11000/oozie/' target="_blank">Oozie Dashboard</a></li>
+					</ul>
+			   </li>
+			</ul>
+			</div>
+			<div><input type="hidden" id="home_date"/></div>
+				
+				<div id="top_tbl" class="topCornerRoundedFill">
+					<span id="currentDateTop"></span>&nbsp;&nbsp;<span>Top 3 Time Consuming Job</span><!--<i class="fa fa-thumbs-o-down fa-lg" style="float:right; margin:2px;"></i>-->
+				</div>
+				<div id="top_table_holder">
+				<table class="datatable" id="top_three" width="100%" height="auto" border="0" cellspacing="2" cellpadding="2" style="display:table;">
+					<thead>
+						<tr>
+							<th width="70%">ID</th>
+							<th width="30%">Time*</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				</div>
+			
+			
+				<div class="topCornerRoundedFill top_tbl_Fill">
+					<span id="currentDateBottom"></span>&nbsp;&nbsp;<span>Low 3 Time Consuming Job</span><!--<i class="fa fa-thumbs-o-up fa-lg" style="float:right; margin:2px;"></i>-->
+				</div>
+				<div id="bottom_tbl_holder">
+				<table class="datatable" id="bottom_three" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr >
+							<th width="70%">ID</th>
+							<th width="30%">Time*</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				</div>
+			
+			<span style="font-size:.8em;">*Time scale used in ms</span>
+		</div>
+		
+		<!-- application function -->
+		<div class="9" style="display:table;">
+		<div class="col-md-12">
+			<span id="section_heading"></span>
+		</div>
+		
+		<div id="screen_content">
+		</div>
+		
+		</div>
+		
+	</div>
+ 

@@ -1,0 +1,29 @@
+[
+								{"name":"File Copy",
+								 "cData":[
+											{"hr":0,"count":10},
+											{"hr":1,"count":20},
+											{"hr":2,"count":0},
+											{"hr":3,"count":5},
+											{"hr":4,"count":20}
+										 ]
+								 },
+								 {"name":"DB Copy", 
+								  "cData":[
+											{"hr":0,"count":20},
+											{"hr":1,"count":20},
+											{"hr":2,"count":20},
+											{"hr":3,"count":20},
+											{"hr":4,"count":20}
+										 ]
+								 },
+								 {"name":"File Copy from FTP", 
+								  "cData":[
+											{"hr":0,"count":20},
+											{"hr":1,"count":20},
+											{"hr":2,"count":28},
+											{"hr":3,"count":20},
+											{"hr":4,"count":80}
+										 ]
+								 }
+							]
