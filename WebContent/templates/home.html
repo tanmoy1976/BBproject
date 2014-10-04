@@ -3,7 +3,7 @@
 
     <div class="navbar navbar-default ui-widget-header  ui-widget-header" role="navigation">
     <div class="container" style="width:100%;">
-		<div class="header"><span class="logo"><img src="images/TMO_small.png" alt="T-Mobile Logo"/></span>Backbone Project</div>
+		<div class="header"><span class="logo">Backbone.js Project</span></div>
 		<div class="show-user-name">Welcome:<span id="user_name"><%= username %></span></div>
         <a href="#login" class="ui-widget ui-state-default" id="loginstyle"><span class="fa fa-power-off "></span></a>
 
@@ -19,22 +19,22 @@
 			<ul>
 			   <li style="visibility:hidden;"></li>
 			   <li id="ops_dashboard" class=" active_accord has-sub active">
-					<a><span>Dashboard</span></a>
+					<a><span>Booking Details</span></a>
 					<ul style="display:block;">
-						<li><a href='#dashBoard/show_ops_dasboard'>Operational Dashboard</a></li>
-						<li><a href='#dashBoard/showdashBoard'>Job Summary</a></li>
-						<!--<li><a href='#dashBoard/show_lineage_dashboard'>Lineage Dashboard</a></li>-->
-						<li><a href='http://devehdp004.unix.gsm1900.org:11000/oozie/' target="_blank">Oozie Dashboard</a></li>
+						<li><a href='#dashBoard/show_count_dasboard'>Booking Count by Hrs.</a></li>
+						<li><a href='#dashBoard/showdashBoard'>Booking Status by Hrs.</a></li>
+						<li><a href='#dashBoard/showdashBoard'>Booking Count by Hrs.</a></li>
+						<li><a href='#dashBoard/showdashBoard'>Booking Size by Hrs.</a></li>
 					</ul>
 			   </li>
 			</ul>
 			</div>
 			<div><input type="hidden" id="home_date"/></div>
 				
-				<div id="top_tbl" class="topCornerRoundedFill">
-					<span id="currentDateTop"></span>&nbsp;&nbsp;<span>Top 3 Time Consuming Job</span><!--<i class="fa fa-thumbs-o-down fa-lg" style="float:right; margin:2px;"></i>-->
-				</div>
-				<div id="top_table_holder">
+				<!--<div id="top_tbl" class="topCornerRoundedFill">
+					<span id="currentDateTop"></span>&nbsp;&nbsp;<span>Top 3 Time Consuming Job</span>
+				</div>-->
+				<!--<div id="top_table_holder">
 				<table class="datatable" id="top_three" width="100%" height="auto" border="0" cellspacing="2" cellpadding="2" style="display:table;">
 					<thead>
 						<tr>
@@ -44,13 +44,13 @@
 					</thead>
 					<tbody></tbody>
 				</table>
-				</div>
+				</div>-->
 			
 			
-				<div class="topCornerRoundedFill top_tbl_Fill">
-					<span id="currentDateBottom"></span>&nbsp;&nbsp;<span>Low 3 Time Consuming Job</span><!--<i class="fa fa-thumbs-o-up fa-lg" style="float:right; margin:2px;"></i>-->
-				</div>
-				<div id="bottom_tbl_holder">
+				<!--<div class="topCornerRoundedFill top_tbl_Fill">
+					<span id="currentDateBottom"></span>&nbsp;&nbsp;<span>Low 3 Time Consuming Job</span>
+				</div>-->
+				<!--<div id="bottom_tbl_holder">
 				<table class="datatable" id="bottom_three" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
 					<thead>
 						<tr >
@@ -62,7 +62,7 @@
 				</table>
 				</div>
 			
-			<span style="font-size:.8em;">*Time scale used in ms</span>
+			<span style="font-size:.8em;">*Time scale used in ms</span>-->
 		</div>
 		
 		<!-- application function -->
@@ -71,7 +71,7 @@
 			<span id="section_heading"></span>
 		</div>
 		
-		<div id="screen_content">
+		<div id="screen_content" style="background-color:transparent;">
 		</div>
 		
 		</div>

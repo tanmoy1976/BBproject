@@ -860,7 +860,7 @@ window.nv.tooltip.* also has various helper methods.
                      var removeMe = purging.pop();
                       removeMe.parentNode.removeChild(removeMe);
                   }
-            }, 500);
+            }, 700);
     };
 
 })();
@@ -1430,7 +1430,7 @@ nv.models.historicalBar = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , id = Math.floor(Math.random() * 10000) //Create semi-unique ID in case user doesn't select one
     , x = d3.scale.linear()
     , y = d3.scale.linear()
@@ -3261,7 +3261,7 @@ nv.models.discreteBar = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , id = Math.floor(Math.random() * 10000) //Create semi-unique ID in case user doesn't select one
     , x = d3.scale.ordinal()
     , y = d3.scale.linear()
@@ -4520,7 +4520,7 @@ nv.models.indentedTree = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0} //TODO: implement, maybe as margin on the containing div
     , width = 960
-    , height = 500
+    , height = 700
     , color = nv.utils.defaultColor()
     , id = Math.floor(Math.random() * 10000)
     , header = true
@@ -5131,7 +5131,7 @@ nv.models.line = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , color = nv.utils.defaultColor() // a function that returns a color
     , getX = function(d) { return d.x } // accessor to get the x value from a data point
     , getY = function(d) { return d.y } // accessor to get the y value from a data point
@@ -7534,7 +7534,7 @@ nv.models.multiBar = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , x = d3.scale.ordinal()
     , y = d3.scale.linear()
     , id = Math.floor(Math.random() * 10000) //Create semi-unique ID in case user doesn't select one
@@ -8519,7 +8519,7 @@ nv.models.multiBarHorizontal = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , id = Math.floor(Math.random() * 10000) //Create semi-unique ID in case user doesn't select one
     , x = d3.scale.ordinal()
     , y = d3.scale.linear()
@@ -9879,7 +9879,7 @@ nv.models.ohlcBar = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , id = Math.floor(Math.random() * 10000) //Create semi-unique ID in case user doesn't select one
     , x = d3.scale.linear()
     , y = d3.scale.linear()
@@ -10258,7 +10258,7 @@ nv.models.pie = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 500
-    , height = 500
+    , height = 700
     , getX = function(d) { return d.x }
     , getY = function(d) { return d.y }
     , getDescription = function(d) { return d.description }
@@ -10960,7 +10960,7 @@ nv.models.scatter = function() {
 
   var margin       = {top: 0, right: 0, bottom: 0, left: 0}
     , width        = 960
-    , height       = 500
+    , height       = 700
     , color        = nv.utils.defaultColor() // chooses color
     , id           = Math.floor(Math.random() * 100000) //Create semi-unique ID incase user doesn't select one
     , x            = d3.scale.linear()
@@ -13371,7 +13371,7 @@ nv.models.stackedArea = function() {
 
   var margin = {top: 0, right: 0, bottom: 0, left: 0}
     , width = 960
-    , height = 500
+    , height = 700
     , color = nv.utils.defaultColor() // a function that computes the color
     , id = Math.floor(Math.random() * 100000) //Create semi-unique ID incase user doesn't selet one
     , getX = function(d) { return d.x } // accessor to get the x value from a data point

@@ -1,5 +1,5 @@
 [
-								{"name":"File Copy",
+								{"name":"Travel Agent",
 								 "cData":[
 											{"hr":0,"count":10},
 											{"hr":1,"count":20},
@@ -28,7 +28,7 @@
 											{"hr":8,"count":10}
 										 ]
 								 },
-								 {"name":"DB Copy", 
+								 {"name":"Counter", 
 								  "cData":[
 											{"hr":0,"count":20},
 											{"hr":1,"count":20},
@@ -57,7 +57,7 @@
 											{"hr":8,"count":10}
 										 ]
 								 },
-								 {"name":"File Copy from FTP", 
+								 {"name":"Online", 
 								  "cData":[
 											{"hr":0,"count":20},
 											{"hr":1,"count":20},

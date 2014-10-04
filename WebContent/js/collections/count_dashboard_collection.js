@@ -1,11 +1,11 @@
-// File name: collections/lineage_dashBoard_collection
+// File name: collections/dashBoard_Collection
 define([
 	'underscore',
 	'backbone',
-	'lineageDashBoardModel'
-], function(_, Backbone, lineageDashBoardModel){
-	var lineageDashBoardCollection = Backbone.Collection.extend({
-		model: lineageDashBoardModel,
+	'countDashBoardModel'
+], function(_, Backbone, countDashBoardModel){
+	var countDashBoardCollection = Backbone.Collection.extend({
+		model: countDashBoardModel,
 		//url: 'http://10.114.52.134:8080/TMobileLog/log.json',
 		//url:'/alllog',
 		constructor : function(attributes, options) {
@@ -18,5 +18,5 @@ define([
 			this.url = AppConfigs.baseUrl + this.url;
 		}
 	});
-	return lineageDashBoardCollection;
+	return countDashBoardCollection;
 });
