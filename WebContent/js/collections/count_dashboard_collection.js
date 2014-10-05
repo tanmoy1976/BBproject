@@ -6,8 +6,7 @@ define([
 ], function(_, Backbone, countDashBoardModel){
 	var countDashBoardCollection = Backbone.Collection.extend({
 		model: countDashBoardModel,
-		//url: 'http://10.114.52.134:8080/TMobileLog/log.json',
-		//url:'/alllog',
+		//url:'',
 		constructor : function(attributes, options) {
 			Backbone.Collection.apply( this, arguments );
 			if(typeof attributes !== 'undefined') {
