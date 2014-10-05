@@ -1,0 +1,38 @@
+<!--<!DOCTYPE html>
+<meta charset="utf-8">-->
+
+<div class="row">
+	<div class="col-md-3"><span class="dashboard">Process Steps</span></div>
+	<div class="col-md-12" style="margin-top:3px; margin-left:5px; display:table; background-color:transparent;">
+		<div class="col-md-12" id="chart1" style="width:950px; border:1px solid #aaaaaa;">
+			<svg id="process_steps"></svg>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3"><span class="dashboard">Object Transfer</span></div>
+	<div class="col-md-12" style="margin-top:3px; margin-left:5px; display:table; background-color:transparent;">
+		<div class="col-md-6" id="bubble_chart2" style="width:420px; height:460px; border:1px solid #aaaaaa;">
+		
+		</div>
+		<div class="col-md-6" style="margin-left:8px; width:520px; height:460px; border:1px solid #aaaaaa;">
+		<table id="obj_transfer_detailTbl" width="100%" border="none" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th width="20%">From</th>
+					<th width="20%">Process Id</th>
+					<th width="20%">To</th>
+					<th width="20%">Process ID</th>
+					<th width="20%">Record Count</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+	</div>
+</div>
+<div class="col-md-12" id="zoom_row" style="visibility:hidden; display:none; width:100%; height:100%;">
+	<div id="zoom_bubble" style="border:1px solid #666; background-color:#FFF; position:absolute; z-index:2000; margin-top:-658px; margin-left:80px; padding-bottom:20px;">
+	<span class="ui-widget ui-state-default ui-corner-all ops_view_btn" id="close_zoom" style="margin-left:30px; margin-top:30px;">Close</span>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+[ {  
+									  
+	"job_iD":"JOB001_2014081312324",
+	"start_time":"14:25:15",
+	"end_time":"15:10:15",
+	"duration":"300000",
+	"byte_transferred":"5000",
+	"source":"/src/path",
+	"destination":"/hdfs/final/path",
+	"user":"user01",
+	"status":"Partial"
+},
+{  
+								      
+	"job_iD":"JOB002_2014081312324",
+	"start_time":"14:25:15",
+	"end_time":"15:10:15",
+	"duration":"300000",
+	"byte_transferred":"5000",
+	"source":"/src/path",
+	"destination":"/hdfs/final/path",
+	"user":"user01",
+	"status":"Fail"
+},
+{  
+								    
+	"job_iD":"JOB003_2014081312324",
+	"start_time":"14:25:15",
+	"end_time":"15:10:15",
+	"duration":"300000",
+	"byte_transferred":"5000",
+	"source":"/src/path",
+	"destination":"/hdfs/final/path",
+	"user":"user01",
+	"status":"Partial"
+},
+{  
+								      
+	"job_iD":"JOB003_2014081312324",
+	"start_time":"14:25:15",
+	"end_time":"15:10:15",
+	"duration":"300000",
+	"byte_transferred":"5000",
+	"source":"/src/path",
+	"destination":"/hdfs/final/path",
+	"user":"user01",
+	"status":"Success"
+}
+]
