@@ -2,9 +2,9 @@ define([
     'jquery', 
 	'underscore', 
 	'backbone', 
- 	'text!../templates/dashBoard/count_dashboard.html', 
-	'countDashBoardModel',
-	'countDashBoardCollection',
+ 	'text!../templates/dashBoard/ops_dashboard.html', 
+	'opsDashBoardModel',
+	'opsDashBoardCollection',
 	'datatables',
 	'applicationjs',
 	'd3andv3',
@@ -15,21 +15,21 @@ define([
 	'heatmapjs',
 	'jqtip'
 	
-], function ($, _, Backbone, tpl, countDashBoardModel, countDashBoardCollection) {
-    var countDashBoardView;
+], function ($, _, Backbone, tpl, opsDashBoardModel, opsDashBoardCollection) {
+    var opsDashBoardView;
     //console.log(FileCopyModel.toJSON());
 	
-    countDashBoardView = Backbone.View.extend({
+    opsDashBoardView = Backbone.View.extend({
 		el : 'div#screen_content',
 		
 		initialize: function () {
 			//this.template = _.template(tpl);
-			this.COUNTdashdoardCollection = new countDashBoardCollection();
+			this.OPSdashdoardCollection = new opsDashBoardCollection();
         },
 		events : {
 		'change input#ops_date_field' : 'changeDate',
-		'change select#count_selection' : 'last_hour_count'//,
-		//'change select#status_selection' : 'last_hour_status' //,
+		'change select#count_selection' : 'last_hour_count',
+		'change select#status_selection' : 'last_hour_status' //,
 		//'mouseover #chart>div>span':'hitmapNameIn'
 		},
 		hitmapNameIn : function(e){
@@ -78,8 +78,8 @@ define([
 					var ctData = JSON.stringify(countData);
 					if($('#count_selection option:selected').val() == "-1"){
 						$.ajax({
-							//url: AppConfigs.baseUrl+'/getjobcountbyhour',
-							url:'json/lastHour/count/all_count/jobCountByHr_all_count.json',
+							url: AppConfigs.baseUrl+'/getjobcountbyhour',
+							//url:'json/lastHour/count/last_4hour/jobCountByHr_last_4_hours.json',
 							dataType:'json',
 							type:'POST',
 							timeout:6000,
@@ -93,6 +93,65 @@ define([
 							}
 						});
 					}
+					/*show status graph
+					************************************/
+					var selectedStatus = $('select#status_selection option:selected').val();
+					var statusData = {jobType:'', dateValue:cdate, hourValue:selectedStatus, kpiType:'getjobstatusbyhourrange'};
+					var stsData = JSON.stringify(statusData);
+					if($('#status_selection option:selected').val() == "-1"){
+						$.ajax({
+							url: AppConfigs.baseUrl+'/getjobstatusbyhourrange',
+							//url:'json/lastHour/status/all_status/jobStatusByHr_all_status.json',
+							dataType:'json',
+							type:'POST',
+							timeout:6000,
+							data:stsData,
+							success:function(data, msg){
+								statusByHour(data);
+							},
+							error: function(err){
+							
+							}
+						});
+					}
+					/*show get cumulative job status
+					***********************************************/
+					var cumulativeStatusData = {jobType:'', dateValue:cdate, kpiType:'getcumulaticejobstatus'};
+					var cStsData = JSON.stringify(cumulativeStatusData);
+					$.ajax({
+						url: AppConfigs.baseUrl+'/getcumulaticejobstatus',
+						dataType:'json',
+						type:'POST',
+						timeout:6000,
+						data:cStsData,
+						success:function(data, msg){
+							statusTbl(data);
+						},
+						error: function(err){
+						
+						}
+					});
+					
+					/*show job size by hour heat-map
+					**********************************************/
+					var heatData = {jobType:'', dateValue:cdate, kpiType:'getjobsizebydate'};
+					var htData = JSON.stringify(heatData);
+					$.ajax({
+						url: AppConfigs.baseUrl+'/getjobsizebydate',
+						dataType:'json',
+						type:'POST',
+						timeout:6000,
+						data:htData,
+						success:function(data, msg){
+							executionDuration(data); 
+							$('[data-title!=""]').qtip();
+							
+						},
+						error: function(err1, err2, err3){
+						
+						}
+					});
+					
 					
 		},
 		
@@ -128,7 +187,47 @@ define([
 						});
 					}
 					
-			
+			/*show status graph
+			************************************/
+			var selectedStatus = $('select#status_selection option:selected').val();
+			var changeStatusData = {jobType:'', dateValue:changeDt, hourValue:selectedStatus, kpiType:'getjobstatusbyhourrange'};
+			var csData = JSON.stringify(changeStatusData);
+			if(cdate != changeDt && selectedStatus != ""){
+						$.ajax({
+							url: AppConfigs.baseUrl+'/getjobstatusbyhourrange',
+							dataType:'json',
+							type:'POST',
+							timeout:6000,
+							data:csData,
+							success:function(data, msg){
+								statusByHour(data);
+							},
+							error: function(err){
+							
+							}
+						});
+					}
+					
+			/*show job size by hour heat-map
+			**********************************************/
+			var changeHeatData = {jobType:'', dateValue:changeDt,  kpiType:'getjobsizebydate'};
+			var chData = JSON.stringify(changeHeatData);
+			if(cdate != changeDt){
+					$.ajax({
+						url: AppConfigs.baseUrl+'/getjobsizebydate',
+						dataType:'json',
+						type:'POST',
+						timeout:6000,
+						data:chData,
+						success:function(data, msg){
+							executionDuration(data); 
+							$('[data-title!=""]').qtip();
+						},
+						error: function(err){
+						
+						}
+					});
+			}
 		  
 		  /*show get cumulative job status
 		  ***********************************************/
@@ -198,7 +297,50 @@ define([
 			
 		},
 		
+		/*show status graph by hour
+		************************************/
+		last_hour_status : function(adate){
+		var selectedStatus = $('select#status_selection option:selected').val();
+		var current_date;
+		var cdate;
+		if(typeof adate == 'object'){
+		current_date = $('#ops_date_field').val().split('/');
+		cdate = current_date[2]+current_date[0]+current_date[1]
+		}
 		
+		var changeStatData = {jobType:'', dateValue:cdate, hourValue:selectedStatus, kpiType:'getjobstatusbyhourrange'};
+		var cStatData = JSON.stringify(changeStatData);
+		if($('#status_selection option:selected').val() == "-1"){
+						$.ajax({
+							url: AppConfigs.baseUrl+'/getjobstatusbyhourrange',
+							dataType:'json',
+							type:'POST',
+							timeout:6000,
+							data:cStatData,
+							success:function(data, msg){
+								statusByHour(data);
+							},
+							error: function(err){
+							
+							}
+						});
+					}else{
+						$.ajax({
+							url: AppConfigs.baseUrl+'/getjobstatusbyhourrange',
+							dataType:'json',
+							type:'POST',
+							timeout:6000,
+							data:cStatData,
+							success:function(data, msg){
+								statusByHour(data);
+							},
+							error: function(err){
+							
+							}
+						});
+					}
+		
+		},
 	
 	close : function(){
 		 $(this.el).empty();
@@ -206,5 +348,5 @@ define([
 		
 		}
 		});
-			return countDashBoardView;
+			return opsDashBoardView;
 });

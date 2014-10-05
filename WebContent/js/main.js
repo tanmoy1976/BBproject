@@ -65,16 +65,16 @@ requirejs.config({
 		'DashBoardView' : 'views/dashBoard/showDashBoardChart',
 		'DashBoardModel' : 'models/DashBoardModel',
 		'DashBoardCollection' : 'collections/dashBoard_Collection',
-		/*bookingCount_dashboard
+		/*ops_dashboard
 		************************************/
-		'countDashBoardView' : 'views/dashBoard/count_dashboard_view',
-		'countDashBoardModel' : 'models/count_dashboard_model',
-		'countDashBoardCollection' : 'collections/count_dashboard_collection',
+		'opsDashBoardView' : 'views/dashBoard/ops_dashboard_view',
+		'opsDashBoardModel' : 'models/ops_dashboard_model',
+		'opsDashBoardCollection' : 'collections/ops_dashboard_collection',
 		/*lineage_dashboard
 		************************************************/
-		'statusDashBoardView' : 'views/dashBoard/status_dashboard_view',
-		'statusDashBoardModel' : 'models/status_dashboard_model',
-		'statusDashBoardCollection' : 'collections/status_dashboard_collection'
+		'lineageDashBoardView' : 'views/dashBoard/lineage_dashboard_view',
+		'lineageDashBoardModel' : 'models/lineage_dashboard_model',
+		'lineageDashBoardCollection' : 'collections/lineage_dashboard_collection'
 	}
 });
 require(['App','jquery', 'applicationjs'], function (App, $ ) {

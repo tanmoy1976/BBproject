@@ -18,7 +18,7 @@
     padding-left:25px;
 }
 hr{
-	border:.5px solid #0D3C75;
+	border:.5px solid #e20074;
 }
 /* data table selector
 ****************************/
@@ -222,11 +222,10 @@ hr{
 }
 .ui-widget-header {
 	border: 1px solid #aaaaaa;
-	background-color: #0D3C75 /*url("../images/ui-bg_flat_100_000000_40x100.png") 50% 50% repeat-x*/;
+	background-color: #20211e /*url("../images/ui-bg_flat_100_000000_40x100.png") 50% 50% repeat-x*/;
 	color: #FFFFFF;
 	font-weight: normal;
 	font-size:2em;
-	
 }
 .ui-widget-header a {
 	color: #FFFFFF;
@@ -235,20 +234,20 @@ hr{
 .ui-widget-loginbox{
 	width:456px;
 	height:400px;
-	background-color:#0D3C75;
+	background-color:#20211e;
 	/*border:1px solid #aaaaaa;*/
 	/*margin-left:80px;*/
 	top:0px;
 	float:left;
 }
 .ui-widget-loginbox h1{
-	color:#0BE6EE;
+	color:#e20074;
 	font-size:6em;
 	text-indent:30px;
 }
 
 .ui-widget-loginbox h2{
-	color:#0BE6EE;
+	color:#e20074;
 	font-size:3em;
 	text-indent:110px;
 	float:left;
@@ -336,7 +335,7 @@ hr{
 }
 
 .ui-widget-input-border, .ui-widget-textarea-border, .ui-widget-select-border{
-	border: 1px solid #0D3C75;
+	border: 1px solid #e20074;
 	margin-left:5px; height:30px;
 }
 
@@ -393,7 +392,7 @@ hr{
 .screen_heading{
 	height:0px; 
 	/*background-color:#666;*/
-	border-top:1px solid #0D3C75;
+	border-top:1px solid #e20074;
 	margin-bottom:2%;
 	width:100%;
 }
@@ -421,7 +420,7 @@ hr{
 .screen_section_hiveTbl{
 	height:25px; 
 	font-size:1em;
-	color:#0D3C75;
+	color:#e20074;
 	margin-top:1%;
 	position:absolute;
 	z-index:2000;
@@ -443,7 +442,7 @@ hr{
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #efefef;
-	background: #0D3C75 /*url("images/ui-bg_highlight-hard_75_eb028a_1x100.png") 50% 50% repeat-x*/;
+	background: #e20074 /*url("images/ui-bg_highlight-hard_75_eb028a_1x100.png") 50% 50% repeat-x*/;
 	font-weight: normal;
 	padding:5px;
 	text-decoration:none; 
@@ -462,7 +461,7 @@ hr{
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #efefef;
-	background: #085FC2 /*url("images/ui-bg_highlight-soft_75_BD116A_1x100.png") 50% 50% repeat-x*/;
+	background: #BD116A /*url("images/ui-bg_highlight-soft_75_BD116A_1x100.png") 50% 50% repeat-x*/;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -480,8 +479,8 @@ hr{
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 1px solid transparent;
-	background: #085FC2 /*url("images/ui-bg_highlight-soft_65_BD116A_1x100.png") 50% 50% repeat-x*/;
+	border: 1px solid #efefef;
+	background: #BD116A /*url("images/ui-bg_highlight-soft_65_BD116A_1x100.png") 50% 50% repeat-x*/;
 	font-weight: normal;
 	color: #ffffff;
 }
