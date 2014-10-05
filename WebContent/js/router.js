@@ -1,11 +1,9 @@
 define("Router", [
     "jquery", "underscore", "backbone", "LoginView", "HomeView",
-	"DashBoardView", "DashBoardModel",  "DashBoardCollection", 
-	"opsDashBoardView", "opsDashBoardModel",  "opsDashBoardCollection", "lineageDashBoardView", "lineageDashBoardModel", "lineageDashBoardCollection",
+	"countDashBoardView", "countDashBoardModel",  "countDashBoardCollection",
 	"applicationjs", "datatables", "app_script", "objectTransfer", "objZoom", "jquery-ui",  "jqcookie", "jqtip"
 	], function ($, _ , Backbone, loginView, homeView,  
-             DashBoardView, DashBoardModel, DashBoardCollection,
-			 opsDashBoardView, opsDashBoardModel, opsDashBoardCollection, lineageDashBoardView, lineageDashBoardModel, lineageDashBoardCollection) {
+             countDashBoardView, countDashBoardModel, countDashBoardCollection) {
     var router,
         c;
 		
@@ -14,7 +12,7 @@ define("Router", [
             ""		                	: "login",
 			"home"						: "home",
 			"dashBoard/showdashBoard" 	: "dashBoardViewChart",
-			"dashBoard/show_ops_dasboard" : "ops_dashboardViewGraph",
+			"dashBoard/show_count_dasboard" : "count_dashboardViewGraph",
 			"dashBoard/show_lineage_dashboard" : "lineage_dashboardViewGraph",
 			"auth"						: "authenticate",
 			"login" 					: "login",
@@ -86,7 +84,7 @@ define("Router", [
 			this.HomeView.render(user,function(){
 				
 			});
-			self.ops_dashboardViewGraph();
+			self.count_dashboardViewGraph();
 			this.accord();
 			var that = this;
 			that.cloaseOpenAccord();
@@ -155,19 +153,19 @@ define("Router", [
 			this.DashBoardView.render();
 			
 		},
-		/*ops_dashboard graph view*/
-		ops_dashboardViewGraph: function(){
+		/*count_dashboard graph view*/
+		count_dashboardViewGraph: function(){
 		//statusTbl(); // status table details
 			this.loadHomeView();
-			if(this.opsDashBoardView){
-				this.opsDashBoardView.close();
+			if(this.countDashBoardView){
+				this.countDashBoardView.close();
 			}
-			OPSdashboardModel = new opsDashBoardModel();
-			OPSdashboardCollection = new opsDashBoardCollection();
+			COUNTdashboardModel = new countDashBoardModel();
+			COUNTdashboardCollection = new countDashBoardCollection();
 
-			this.opsDashBoardView = new opsDashBoardView({model: OPSdashboardModel, collection: OPSdashboardCollection});
+			this.countDashBoardView = new countDashBoardView({model: COUNTdashboardModel, collection: COUNTdashboardCollection});
 			//$('#tab_holder').css({'display':'none'});
-			this.opsDashBoardView.render();
+			this.countDashBoardView.render();
 			
 		},
 		lineage_dashboardViewGraph: function(){

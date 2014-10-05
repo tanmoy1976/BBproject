@@ -1,13 +1,13 @@
-/* file name: models/lineage_dashBoard_model
+/* file name: models/DashBoardModel
 	HCL Tech: 2014
 ********************************/
 define([
   'underscore',
   'backbone'
 ], function(_, Backbone){
-  var lineageDashBoardModel = Backbone.Model.extend({
+  var countDashBoardModel = Backbone.Model.extend({
     //url: 'http://10.114.52.134:8080/TMobileLog/log.json',
-	//url:'/alllog',
+	url:'/alllog',
 	constructor : function(attributes, options) {
 			Backbone.Model.apply( this, arguments );
 			if(typeof attributes !== 'undefined') {
@@ -19,5 +19,5 @@ define([
 		}
   });
   // Return the model for the module
-  return lineageDashBoardModel;
+  return countDashBoardModel;
 });

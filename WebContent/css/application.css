@@ -83,11 +83,15 @@
 	width:100%;
 }
 #chart1{
-	height:150px;
+	height:300px;
 	width:920px; 
 	border:1px solid #aaaaaa;
 }
+#chart1>svg{
+	height:70%;
 
+
+}
 #chart2{
 	height:130px;
 	width:920px; 
@@ -275,7 +279,7 @@ a:hover{
 /*home view
 *****************************/
 #loginstyle{
-	background-color:#20211E; 
+	background-color:#0D3C75; 
 	border:none; 
 	cursor:pointer; 
 	float:right;
