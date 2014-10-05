@@ -1,5 +1,5 @@
-
-
+//configuration Manager
+//HCL TECHNOLOGY 2014
 
 	Date.prototype.customFormat = function(formatString){
 		var YYYY,YY,MMMM,MMM,MM,M,DDDD,DDD,DD,D,hhh,hh,h,mm,m,ss,s,ampm,AMPM,dMod,th;
