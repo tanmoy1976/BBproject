@@ -1,0 +1,428 @@
+/*global css*
+****************/
+.hide{
+  display:none;
+}
+.show{
+   display:block;
+}
+/*.selected{background-color:#000; color:#FFF;}*/
+.dashboard{
+	display:block;
+	background-color:#aaaaaa;
+	color:#FFF;
+	font-size: 0.9em;
+	width:100%;
+	margin-bottom:-3px;
+	margin-top:3px;
+	margin-left:5px;
+	padding-left:5px;
+	padding-top:5px;
+	height:30px;
+	
+}
+.ops_stat_tbl{
+	cursor:pointer; 
+	color:#bd116A; 
+	text-decoration:underline;
+}
+
+.ops_stat_tblhidden{
+	display:none;
+}
+.topCornerRoundedBorder{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.topCornerRoundedFill{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.roundedTblCorner{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.ops_view_btn{height:25px; 
+	border:none; 
+	margin-top:3px; 
+	line-height:25px; 
+	padding:0px 5px 0 5px;}
+.ops_tbl_close{
+	visibility:hidden;
+	display:none;
+}
+.ops_tbl_view{
+	visibility:visible;
+	display:table;
+}
+#chart>div>span{
+	font-weight:normal;
+	word-wrap:breack-word;
+	text-align:center;
+	font-size:1em;
+	vertical-align:center;
+	
+}
+#chart{
+	width:920px; 
+	border:1px solid #aaaaaa;
+	margin-top:-2px;
+}
+#jobCount_date thead tr th {
+    background-color: #7f244c;
+    color: #ffffff;
+    font-weight: normal;
+    height: 15px;
+    line-height: 15px;
+    padding: 2px;
+	font-size:.9em;
+	text-align:center;
+}
+#executionDuration{
+	height:150px;
+	width:100%;
+}
+#chart1{
+	height:300px;
+	width:920px; 
+	border:1px solid #aaaaaa;
+}
+#chart1>svg{
+	height:70%;
+
+
+}
+#chart2{
+	height:130px;
+	width:920px; 
+	border:1px solid #aaaaaa;
+}
+
+#top_three thead, #bottom_three thead{border-bottom:1px solid #aaaaaa;}
+#top_three tbody tr td, #bottom_three tbody tr td{border-bottom:1px solid #aaaaaa; 
+	height:30px; 
+	word-wrap: breack-word;
+}
+#obj_transfer_detailTbl thead tr{
+	border-bottom:1px solid #666;
+	
+	height:30px;
+}
+#obj_transfer_detailTbl thead tr th{
+	text-align:left;
+	border:none;
+	color:#e20074;
+	font-size:.9em;
+	font-weight:200;
+	
+}
+#obj_transfer_detailTbl {margin-top:10px; border:none;}
+
+#bubble_chart2{cursor:zoom-in; cursor: -moz-zoom-in; cursor: -webkit-zoom-in; cursor: zoom-in;}
+.node {
+  border: solid 1px #f5f5f5;
+  font-size: 1em;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+  text-align:center;
+  vertical-align:center;
+  font-weight:600;
+}
+.heatmap_form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.error{
+color: "#FF0000";
+}
+.level2Tbl_Holder{
+	width:940px;
+	display:table;
+}
+#chart1 svg {
+  height: 300px;
+  margin: 10px;
+  min-width: 100px;
+  min-height: 100px;
+}
+#filecopy_statistic_tbl tbody tr:hover{background-color:#f7e4d0; color:#000; cursor:pointer;}
+#filecopy_statistic_tbl thead tr th{font-weight:normal; background-color:#7F244C; line-height:25px; height:25px; padding:5px; color:#FFFFFF;}
+#dbcopy_statistic_tbl thead tr th{font-weight:normal; background-color:#7F244C; line-height:25px; height:25px; padding:5px; color:#FFFFFF;}
+table > #filecopy_statistic_tbl, table > #dbcopy_statistic_tbl{margin-top:-40px;}
+.table_holder_show{display:block;}
+.table_holder_hide{display:none;}
+#screen_content{border-left:1px solid #CCC;}
+#error_text{
+	font-size:1.2em;
+	color:red;
+}
+#success_text{
+	font-size:1.2em;
+	color:green;
+}
+.help-inline{
+color:red;
+}
+/*configuration tab
+**********************/
+#config_button{
+	line-height:50px; 
+	padding:0 10px 0 20px;
+}
+#config_sub{
+	padding: 0 6px 0 6px; 
+	background-color:transparent; 
+	border:none;
+}
+#open_fileCopy,#open_dbCopy{
+	padding:0 25px 0 25px; 
+	margin:2% 0  2% 0 ;
+}
+#screen_content{
+	padding-top:5px;
+}
+#ops_dashboard_sub{height:30px;}
+.create_config_selected, .edit_config_selected{
+	cursor:default;
+	color:#BD116A; 
+	text-decoration:none;
+	background-color:#F5F5F5;
+	border-top:1px solid #BD116A;
+	border-right:1px solid #BD116A;
+	border-left:1px solid #BD116A;
+	border-bottom:1px solid #F5F5F5;
+}
+fieldset{height:auto; border:1px solid #666; padding:15px;}
+fieldset legend{font-size:1em; color:#666; width:auto; border:none; margin-top:15px; margin-left:15px;}
+.create_config_default, .edit_config_default{
+	cursor:default;
+	color:#aaaaaa; 
+	text-decoration:none;
+	border:1px solid #e20074;
+}
+
+
+#tab_holder a:link{
+	color:#CCC;
+}
+#tab_holder a:hover{
+	color:#BD116A;
+}
+
+.tab_holder_background{
+	border-bottom:1px solid #e20074;
+	height:45px;
+}
+
+#file_config_tbl th{
+	font-weight:normal;
+}
+
+.confi_source{border: 1px solid #aaaaaa; margin-top:-22px; padding:2%; width:100%; height:auto;}
+.form_patt{margin-top:8px;margin-bottom:8px;}
+#available_true{color:green;float:right;}
+#available_false{color:red;float:right;}
+#file_exists_true{color:green;float:right;}
+#file_exists_false{color:red;float:right;}
+.boxGlow{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(260, 49, 35, .75);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(260, 49, 35, .75);
+	box-shadow: 0px 0px 15px 5px rgba(260, 49, 35, .75);
+}
+.left-position{
+	margin-left:2%;
+}
+a{
+	color:#e20047;
+}
+a:hover{
+	color:#bd116a;
+}
+
+#ui-datepicker-div {
+	width:280px;
+}
+
+
+
+.ui-state-default{
+	
+	font-size:1.2em;
+}
+.ui-datepicker-month, .ui-datepicker-year{
+	font-size:.7em;
+	font-weight:normal;
+}
+.ui-icon, .ui-icon-circle-triangle-e{
+	color:#FFF;
+}
+.partial{
+	background-image:url('../images/HalfCercle-partial.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.pass{
+	background-image:url('../images/circle-pass.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.fail{
+	background-image:url('../images/circle-fail.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*home view
+*****************************/
+#loginstyle{
+	background-color:#0D3C75; 
+	border:none; 
+	cursor:pointer; 
+	float:right;
+	font-size:25px;
+	margin-top:1px;
+}
+#home_older{margin-top:-20px;}
+#home_older>div{display:table;}
+#top_tbl{
+	width:100%; 
+	margin-top:35%; 
+	background-color:#C71C1F; 
+	height:25px; 
+	color:#FFF; 
+	padding:4px;
+}
+#top_table_holder{
+	padding:5px; 
+	height:auto; 
+	border:1px solid #C71C1F;
+}
+#top_three>thead>tr>th{
+	background-color:#FFF; 
+	border-bottom:1px solid #C71C1F; 
+	color:#C71C1F; 
+	font-weight:normal;
+}
+.top_tbl_Fill{
+	width:100%; 
+	height:100%; 
+	margin-top:5%; 
+	background-color:#008a15; 
+	height:25px; 
+	color:#FFF; 
+	padding:4px;
+}
+#bottom_tbl_holder{
+	padding:5px; 
+	height:auto; 
+	border:1px solid #008A15;
+}
+#bottom_three>thed>tr>th{
+	background-color:#FFF; 
+	border-bottom:1px solid #008a15; 
+	color:#008a15; 
+	font-weight:normal;
+}
+#screen_content{
+	margin-bottom:20px; 
+	background-color:#FFF; 
+	padding:5px;
+}
+/*ops_dashboard
+**************************/
+
+.d3-tip:hover {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+ 
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+.countbyhr{
+	margin-top:3px; 
+	margin-left:5px; 
+	display:table; 
+	background-color:transparent;
+}
+.statbyhr{
+	margin-top:3px; 
+	margin-left:5px; 
+	display:table; 
+	background-color:transparent;
+}
+.jobstatcount{
+	margin-top:2px; 
+	margin-left:20px; 
+	padding-top:2px; 
+	padding-bottom:2px; 
+	width:920px; 
+	border:1px solid #aaaaaa;
+}
+.jobcountTblth2{
+	border-left:1px solid #aaaaaa; 
+	border-right:1px solid #aaaaaa; 
+	border-bottom:1px solid #aaaaaa;
+}
+.jobcountTblth3{
+	border-bottom:1px solid #aaaaaa; 
+	border-right:1px solid #aaaaaa;
+}
+.jobcountTblth4{
+	border-bottom:1px solid #aaaaaa; 
+}
+.treemap{
+	margin-top:5px; 
+	margin-left:5px; 
+	display:table; 
+	background-color:transparent;
+}
+#count_selection{height:20px;}
+#status_selection{height:20px;}
+#count_divition>th{color:#FFF;}
+
+/*dashboard collapsible tbl
+****************************************/
+#fileCopy_holder>div{margin-left:18px;}
+#fileCopy_holder label{margin-left:-17px;}
+#fileCopy_holder input{height:20px;}
+#fileCopy_status_option{height:20px;}
+#dbCopy_holder>div{margin-left:18px;}
+#dbCopy_holder label{margin-left:-17px;}
+#dbCopy_holder input{height:20px;}
+#dbCopy_status_option{height:20px;}
+#legend{
+	margin-bottom:15px; 
+	padding-bottom:10px; 
+	border-bottom:1px solid #CCC;
+}
+#file_copy_container{margin-top:25px;}
+#db_copy_container{margin-top:25px;}
+#db_copy_container>#legend{
+	margin-bottom:15px; 
+	padding-bottom:10px; 
+	border-bottom:1px solid #CCC;
+}
